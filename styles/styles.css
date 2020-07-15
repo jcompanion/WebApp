@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+.container {
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 90px 1fr;
+    grid-template-areas: 
+    "header header"
+    "nav main";
+    
+}
+.social-stats {
+    display: flex;
+}
+.social-stats img {
+    width: 30%;
+    border: 1px solid lightgray;
+}
+.title {
+    font-weight: 100;
+}
+header {
+    background-color: #7477bf;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header h1{
+    margin: 20px;
+    color: white;
+}
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+}
+.username {
+    display: flex;
+    padding: 30px;
+}
+.bell {
+    width: 2rem;
+    border-right: rgb(90, 102, 102);
+}
+nav {
+    grid-area: nav;
+    background-color: rgb(96, 83, 128);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.alert-container {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7477bf;
+    color: #fbfbfb;
+    margin: 20px;
+    padding: 1rem 5px;
+    border-radius: 5px;
+  }
+  
+  .alert p {
+    padding-bottom: 0;
+  }
+  
+  .btn-alert {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+  }
+nav svg {
+    width: 40%;
+    margin-top: 30px;
+}
+.st0 {
+    fill: gray;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 500px 500px 300px 500px 500px;
+    grid-template-areas: 
+    "search search"
+    "traffic traffic"
+    "daily-traffic mobile-users"
+    "social-stats social-stats"
+    "new-members recent-activity"
+    "message-user settings";
+}
+.search {
+    grid-area: search;
+    display: flex;
+    justify-content: space-between;
+}
+.time {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-top: none;
+    padding: 10px;
+}
+input {
+    padding: 1rem;
+    border: 1px solid #c9c9c9f3;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    box-shadow: 0 0 4px 2px rgba(140, 140, 140, 0.2);
+    outline: 0;
+  }
+.time-interval {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .m1-info,
+  .m2-info,
+  .m3-info,
+  .m4-info {
+      display: flex;
+      flex-flow: row;
+  }
+.traffic{
+    grid-area: traffic;
+}
+
+.daily-traffic {
+    grid-area: daily-traffic;
+}
+
+.mobile-users {
+    grid-area: mobile-users;
+}
+
+.social-stats {
+    grid-area: social-stats;
+}
+.new-members {
+    grid-area: new-members;
+}
+.recent-activity {
+    grid-area: recent-activity;
+}
+.message-user {
+    grid-area: message-user;
+}
+.settings {
+    grid-area: settings;
+}
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #7477bf; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
