@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Logo Styles */
+
+header {
+    display: flex;
+    background-color: rgb(120, 129, 202);
+    height: 70px;
+}
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #2ecc71;
+    padding: 0;
+    margin: 7px 10px 12px 0;
+  }
+.logo-bell {
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid gray;
+    flex: 1 auto;
+    align-items: center;
+}
+.logo-bell h1 {
+    margin: 20px;
+    color: white;
+}
+.logo-bell span {
+    font-weight: 200;
+}
+.logo-bell img {
+    height: 30px;
+    margin: 20px 0 20px 20px;
+    transition: transform .15s ease-in-out;
+}
+.logo-bell img:hover {
+    transform: scale(1.2);
+}
+.user {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    border-left: 1.5px solid;
+    border-top: 0;
+    border-bottom: 0;
+    border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(189, 189, 189) 48%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+}
+.username {
+    margin-right: 20px;
+    color: white;
+}
+.user img {
+    border-radius: 50%;
+    height: 40px;
+    margin: 20px;
+}
+
+/* NavBar Styles */
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 70px;
+    background-color: rgb(83, 85, 133);
+    align-content: center;
+}
+nav div {
+    display: flex;
+    align-items: center;
+}
+.nav-icon {
+    height: 60%;
+}
+.active {
+    border-bottom: solid 3px rgb(160, 218, 103);
+}
+/* Search input styles */
+.dashboard {
+    grid-area: dashboard;
+    display: flex;
+    justify-content: space-between;
+}
+.dash {
+    width: 20%;
+    border-right: gray solid 1px;
+}
+.dash h3 {
+    margin: 10px;
+    padding: 5px;
+    font-size: 3vw;
+}
+.search-input {
+    display: flex;
+    background-color: rgb(247, 247, 247);
+    border-bottom: gray solid 1px;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+   justify-content: flex-end;
+}
+.input {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+/* Alert Styles */
+.alert {
+    grid-area: alert;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7477bf;
+    color: #fbfbfb;
+    margin: 20px;
+    padding: .3rem 0;
+    border-radius: 5px;
+  }
+  
+  .alert p {
+    padding-bottom: 0;
+    margin-left: 20px;
+  }
+  
+  .btn-alert-x {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+  }
+/* Traffic Section */
+.traffic {
+    grid-area: traffic;
+}
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+.line h3 {
+    margin-left: 15px;
+}
+.units-time {
+    display: flex;
+}
+.units-time h4 {
+    padding: 10px;
+    font-size: smaller;
+    color: rgb(54, 54, 54);
+}
+.active-time h4 {
+    background-color: rgb(160, 218, 103);
+    border-radius: 50px;
+    color: white;
+}
+.traffic-div {
+    grid-area: trafficgraph;
+    margin: 0 auto;
+    width: 90%;
+}
+/* Daily Traffic */
+.daily-traffic {
+    grid-area: daily;
+    width: 100%;
+    margin-top: 20px;
+    border-top: gray solid 1px;
+    border-bottom: gray solid 1px;
+}
+.daily-traffic h3 {
+    margin-left: 15px;
+}
+.daily-canvas {
+    width: 90%;
+    margin: 0 auto;
+}
+/* Mobile Users */
+.mobile-users {
+    grid-area: mobile;
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: gray solid 1px;
+}
+.mobile-users h3 {
+    margin-left: 15px;
+}
+.mobile-canvas {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+/* Social Stats */
+.social-stats {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    border-bottom: gray solid 1px;
+}
+.social-stats h3 {
+    margin-left: 15px;
+    color: rgb(120, 129, 202);
+}
+.social-stats h1 {
+    font-weight: 2;
+    font-size: 200%;
+}
+.social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(120, 129, 202);
+    border-radius: 50%;
+    margin: auto 0;
+    height: 100px;
+    width: 100px;
+}
+.logo img {
+    width: 70%;
+}
+.logo-box {
+    display: flex;
+    justify-content: space-evenly;
+    border: gray solid 1px;
+    background-color: rgb(247, 247, 247);
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.stat {
+    margin-left: 10px;
+}
+.stat h3 {
+    font-size: 1rem;
+}
+/* New Memebers */
+.new-members {
+    grid-area: members;
+}
+.new-members h3 {
+    margin-left: 15px;
+}
+.img1 img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+.member {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+}
+.img1 {
+    display: flex;
+}
+.user-info {
+    margin-left: 15px;
+}
+.date {
+    align-self: center;
+}
+.border {
+    width: 80%;
+    border: .5px solid gray;
+    border-radius: 50%;
+}
+.border-last {
+    border: gray solid 1px;
+    margin-top: 30px;
+}
+
+/* ===========Recent Activity========================== */
+/* Shares same style as New Memebers */
+.recent-activity {
+    grid-area: activity;
+}
+.recent-activity h3 {
+    margin-left: 15px;
+}
+/* ===========Message User============================= */
+.message-user h3 {
+    margin-left: 15px;
+}
+.message-user {
+    grid-area: message;
+    border-bottom: gray solid 1px;
+}
+.message-info {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+.message-info input,
+textarea {
+    margin-bottom: 25px;
+    border-radius: 3px;
+    text-indent: 15px;
+    border: 1px solid gray;
+    height: 40px;
+    background-color: rgb(247, 247, 247);
+}
+textarea {
+    min-height: 5.625em;
+    max-height: 12.5em;
+}
+textarea::placeholder {
+    padding-top: 10px;
+}
+.message-info button{
+    background-color: rgb(120, 129, 202);
+    color: white;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+/* ===============Settings=============== */
+.settings h3 {
+    margin-left: 15px;
+}
+.toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    justify-content: space-between;
+    width: 50%;
+}
+.toggle p {
+    margin-top: 20px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(120, 129, 202);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(120, 129, 202);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  /* Select Styles */
+  .settings {
+      grid-area: settings;
+      display: flex;
+      flex-direction: column;
+  }
+  .settings select {
+      align-self: center;
+      width: 80%;
+      margin-top: 30px;
+      margin-bottom: 25px;
+      border-radius: 3px;
+      text-indent: 15px;
+      border: 1px solid gray;
+      height: 40px;
+      background-color: rgb(247, 247, 247);
+  }
+  .settings select:hover {
+      cursor: pointer;
+  }
+  .time-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-bottom:30px;
+  }
+  .time-btn button {
+      width: 40%;
+  }
+  .btn1 {
+    background-color: rgb(120, 129, 202);
+    color: white;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .btn2 {
+    background-color: rgb(190, 190, 190);
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: white;
+    border: none;
+  }
+  
+  .btn2:hover,
+  .btn1:hover {
+      cursor: pointer;
+  }
+  /* Media Queries */
+  @media (max-width: 476px) {
+      .logo-bell h1 {
+          font-size: 110%;
+          margin: 10%;
+      }
+      nav {
+          height: 40px;
+      }
+      header {
+          height: 40px;
+      }
+      .user img {
+          height: 60%;
+          margin: 10%;
+      }
+      .user {
+          width: 40%;
+      }
+      .username {
+          font-size: 60%;
+          margin: none;
+      }
+      .search-input {
+          height: 40px;
+          width: 60%;
+      }
+      .dash {
+          height: 40px;
+          width: 40%;
+      }
+      .dash h3 {
+          font-size: 100%;
+      }
+      .input {
+          width: 100px;
+          height: 30%;
+      }
+      .logo-bell img {
+          height: 20px;
+      }
+      .grid h3 {
+          font-size: 80%;
+      }
+      .grid p {
+          font-size: 70%;
+      }
+      .toggle {
+          width: 80%;
+      }
+  }
+  @media (min-width: 770px) { 
+      .grid {
+        display: grid;
+        
+        grid-template-areas: 
+        "nav dashboard dashboard"
+        "nav alert alert"
+        "nav traffic traffic"
+        "nav trafficgraph trafficgraph"
+        "nav daily mobile"
+        "nav social social"
+        "nav members activity"
+        "nav message settings"
+      }
+      nav {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 100%;
+          width: 80px;
+      }
+      .active {
+          border-left: 3px solid rgb(160, 218, 103);
+          border-bottom: none;
+          margin-top: 10px;
+      }
+      .nav-icon {
+        margin: 0 auto;
+        width: 70%;
+      }
+      .mobile-users {
+          border-top: 1px solid gray;
+          border-left: 1px solid gray;
+      }
+      .dash {
+          width: 20%;
+      }
+      .search-input {
+          width: 80%;
+      }
+      .dash h3 {
+          font-size: 150%;
+      }
+      .social-container {
+          flex-direction: row;
+          margin-bottom: 35px;
+      }
+      .logo-box {
+          margin: 5px;
+      }
+      .new-members {
+          border-right: 1px solid gray;
+      }
+      .message-user {
+          border-right: 1px solid gray;
+      }
+  }
+  @media (min-width: 1200px) {
+      .main {
+          max-width: 80%;
+          margin: 0 auto;
+      }
+  }

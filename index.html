@@ -3,222 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <title>YourApp</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>WebApp</title>
+    <script src="https://kit.fontawesome.com/0b585aa967.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-<header>
-    <div class="title-bar">
-        <h1>Your<span class="title">App&#8482</span></h1>
-    </div>
-    <div class="username">
-        <img class="bell" src="icons/icon-bell.svg">
+    <div class="main">
+    <header>
+        <div class="logo-bell">
+            <h1>Your<span class="app">App&#8482</span></h1>
+            <img src="icons/icon-bell.svg" alt="Alerts Icon">
+        </div>
         <div class="dot"></div>
-        <img src="images/member-1.jpg"><p>Jessica Watts</p>
-    </div>
-</header>
-
-<nav>
-    <svg class="dashboard" version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-</style>
-<g id="_x31_0_20_">
-	<g>
-		<path class="st0" d="M25,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,16.7,23.3,18,25,18z M24,14h2v2h-2V14z M25,26
-			c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,24.7,23.3,26,25,26z M24,22h2v2h-2V22z M17,26c1.7,0,3-1.3,3-3
-			c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C14,24.7,15.3,26,17,26z M16,22h2v2h-2V22z M28,0H6C3.8,0,2,1.8,2,4v24c0,2.2,1.8,4,4,4h22
-			c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28c0,1.1-0.9,2-2,2H6c-1.1,0-2-0.9-2-2V8h26V28z M30,6H4V4c0-1.1,0.9-2,2-2h22
-			c1.1,0,2,0.9,2,2V6z M17,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C14,16.7,15.3,18,17,18z M16,14h2v2h-2V14z M9,26
-			c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C6,24.7,7.3,26,9,26z M8,22h2v2H8V22z M9,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3
-			c-1.7,0-3,1.3-3,3C6,16.7,7.3,18,9,18z M8,14h2v2H8V14z"/>
-	</g>
-</g>
-</svg>
-<svg class="members" version="1.1" id="Line_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-<style type="text/css">
-.st0{fill:#FFFFFF;}
-</style>
-<g id="_x37__17_">
-<g>
-   <path class="st0" d="M18,16.4c1.3-1.7,2-3.9,2-6.4c0-5.5-4-10-9-10C6,0,2,4.5,2,10c0,2.4,0.8,4.6,2,6.4c-2.3,0.8-4,3-4,5.6v4
-       c0,3.3,2.7,6,6,6h10c3.3,0,6-2.7,6-6v-4C22,19.4,20.3,17.2,18,16.4z M4,10c0-4.4,3.1-8,7-8c3.9,0,7,3.6,7,8s-3.1,8-7,8
-       C7.1,18,4,14.4,4,10z M20,25.5c0,2.5-2.2,4.5-4.9,4.5H6.9C4.2,30,2,28,2,25.5v-3c0-2.1,1.6-3.9,3.8-4.4C7.2,19.3,9,20,11,20
-       c2,0,3.8-0.7,5.2-1.9c2.2,0.5,3.8,2.2,3.8,4.4V25.5z M23,8h8c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1h-8c-0.6,0-1,0.4-1,1
-       C22,7.6,22.4,8,23,8z M31,24h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6c0.6,0,1-0.4,1-1C32,24.4,31.6,24,31,24z M31,12h-8
-       c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1C32,12.4,31.6,12,31,12z M31,18h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6
-       c0.6,0,1-0.4,1-1C32,18.4,31.6,18,31,18z"/>
-</g>
-</g>
-</svg>
-<svg class="visits" version="1.1" id="Line_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-<style type="text/css">
-.st0{fill:#FFFFFF;}
-</style>
-<g id="_x35__10_">
-<g>
-   <path class="st0" d="M14,0h-2c-1.1,0-2,0.9-2,2v28c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2V2C16,0.9,15.1,0,14,0z M14,29
-       c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z M4,9H2c-1.1,0-2,0.9-2,2v19c0,1.1,0.9,2,2,2h2
-       c1.1,0,2-0.9,2-2V11C6,9.9,5.1,9,4,9z M4,29c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V12c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z M24,16h-2
-       c-1.1,0-2,0.9-2,2v12c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2V18C26,16.9,25.1,16,24,16z M24,29c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V19
-       c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z"/>
-</g>
-</g>
-</svg>
-<svg class="settings" version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-<style type="text/css">
-.st0{fill:#FFFFFF;}
-</style>
-<g id="_x32__16_">
-<g>
-   <path class="st0" d="M26,24H14.9c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h1.1
-       c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26c0.6,0,1-0.4,1-1C27,24.4,26.6,24,26,24z M11,27.4c-1.3,0-2.4-1.1-2.4-2.4
-       c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4C13.4,26.3,12.3,27.4,11,27.4z M26,8H14.9c-0.4-1.7-2-3-3.9-3C9.1,5,7.6,6.3,7.1,8H6
-       C5.4,8,5,8.4,5,9c0,0.6,0.4,1,1,1h1.1c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26c0.6,0,1-0.4,1-1C27,8.4,26.6,8,26,8z M11,11.4
-       c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4C13.4,10.3,12.3,11.4,11,11.4z M26,16h-2.1
-       c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h10.1c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26
-       c0.6,0,1-0.4,1-1C27,16.4,26.6,16,26,16z M20,19.4c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4
-       C22.4,18.3,21.3,19.4,20,19.4z M28,0H4C1.8,0,0,1.8,0,4v24c0,2.2,1.8,4,4,4h24c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28
-       c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h24c1.1,0,2,0.9,2,2V28z"/>
-</g>
-</g>
-</svg>
-</nav>
-<main>
-    <div class="search">
-        <h1>Dashboard</h1>
-        <input type="text" placeholder="Search">
-    </div>
-    
-    <div class="traffic time">
-      <div class="alert-container">
-        <div class="alert">
-          <p><strong>Alert</strong> - This is your alert message!</p>
-          <button class="btn-alert">&times;</button>
+        <div class="user">
+            <img src="images/member-1.jpg" alt="Jessica Watts Image">
+            <p class="username">Jessica Watts</p>
         </div>
+    </header>
+    <div class="grid">
+    <nav>
+        <div class="active"><img class="nav-icon" src="icons/icon-dashboard.svg" alt="dashboard icon"></div>
+        <div><img class="nav-icon" src="icons/icon-members.svg" alt="members icon"></div>
+        <div><img class="nav-icon" src="icons/icon-visits.svg" alt="visits icon"></div>
+        <div><img class="nav-icon" src="icons/icon-settings.svg" alt="settings icon"></div>
+    </nav>
+    <div class="dashboard">
+        <div class="dash">
+            <h3>Dashboard</h3>
+        </div>
+        <div class="search-input">
+            <input class="input" type="text" placeholder="Search                                  &#8981">
+        </div>
+    </div>
+    <div class="alert">
+        <p><strong>Alert</strong> - This is your alert message!</p>
+        <button class="btn-alert-x">&times;</button>
       </div>
-        <h3>web traffic</h3>
-          <div class="time-interval">
-            <div class="hourly">
-              <h4>hourly</h4>
+        <div class="traffic line">
+            <h3>TRAFFIC</h3>
+            <div class="units-time">
+                <div class="time">
+                    <h4>Hourly</h4>
+                </div>
+                <div class="time">
+                    <h4>Daily</h4>
+                </div>
+                <div class="time active-time">
+                    <h4>Weekly</h4>
+                </div>
+                <div class="time">
+                    <h4>Monthly</h4>
+                </div>
             </div>
-            <div class="daily">
-              <h4>daily</h4>
+        </div>
+        <div class="traffic-div">
+            <canvas id="traffic"></canvas>
+        </div>
+        <div class="daily-traffic">
+            <h3>DAILY TRAFFIC</h3>
+            <div class="daily-canvas">
+                <canvas id="daily-traffic"></canvas>
             </div>
-            <div class="weekly">
-              <h4>weekly</h4>
+        </div>
+        <div class="mobile-users">
+            <h3>MOBILE USERS</h3>
+            <div class="mobile-canvas">
+                <canvas id="mobile-users"></canvas>
             </div>
-            <div class="monthly">
-              <h4>monthly</h4>
+        </div>
+        <div class="social-stats">
+            <h3>SOCIAL STATS</h3>
+            <div class="social-container">
+                <div class="logo-box">
+                    <div class="logo">
+                        <img src="icons/icon-twitter.svg" alt="Twitter Logo"></img>
+                    </div>
+                    <div class="stat">
+                        <h3>Twitter</h3>
+                        <h1>10,345</h1>
+                    </div>
+                </div>
+                <div class="logo-box">
+                    <div class="logo">
+                        <img src="icons/icon-facebook.svg" alt="Facebook Logo"></img>
+                    </div>
+                    <div class="stat">
+                        <h3>Facebook</h3>
+                        <h1>8,739</h1>
+                    </div>
+                </div>
+                <div class="logo-box">
+                    <div class="logo">
+                        <img src="icons/icon-google-plus.svg" alt="Google Plus Logo"></img>
+                    </div>
+                    <div class="stat">
+                        <h3>Google+</h3>
+                        <h1>2,530</h1>
+                    </div>
+                </div>
             </div>
-          </div>
-        <canvas id="traffic"></canvas>
-    </div>
-    <div class="daily-traffic">
-        <canvas id="daily-traffic"></canvas>
-    </div>
-    <div class="mobile-users">
-        <canvas id="mobile-users"></canvas>
-    </div>
-    <div class="social-stats">
-      <img src="icons/icon-twitter.svg" alt="Twitter Logo">
-      <img src="icons/icon-facebook.svg" alt="Facebook Logo">
-      <img src="icons/icon-google-plus.svg" alt="Google Plus Logo">
-    </div>
-    <div class="new-members">
-      <h3>NEW MEMBERS</h3>
-      <div class="m1">
-        <div class="m1-info">
-          <img src="images/member-1.jpg" alt="Image of Jessica Watts">
-          <p>Jessica Watts</p>
-          <p>jessica.watts@example.com</p>
         </div>
-        <p>10/15/15</p>
-      </div>
-      <div class="m2">
-        <div class="m2-info">
-          <img src="images/member-2.jpg" alt="Image of Jeff Smith">
-          <p>Jeff Smith</p>
-          <p>jeff.smith@example.com</p>
+        <div class="new-members">
+            <h3>NEW MEMBERS</h3>
+            <div class="member">
+                <div class="img1">
+                    <img src="images/member-1.jpg">
+                    <div class="user-info">
+                        <p>Jessica Watts</p>
+                        <p>jessica.watts@example.com</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <p>10/15/15</p>
+                </div>
+            </div>
+            <hr class="border">
+            <div class="member">
+                <div class="img1">
+                    <img src="images/member-2.jpg">
+                    <div class="user-info">
+                        <p>Jim Swole</p>
+                        <p>jim.swole@example.com</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <p>10/15/15</p>
+                </div>
+            </div>
+            <hr class="border">
+            <div class="member">
+                <div class="img1">
+                    <img src="images/member-3.jpg">
+                    <div class="user-info">
+                        <p>Sarah Pepper</p>
+                        <p>sarah.pepper@example.com</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <p>10/15/15</p>
+                </div>
+            </div>
+            <hr class="border">
+            <div class="member">
+                <div class="img1">
+                    <img src="images/member-4.jpg">
+                    <div class="user-info">
+                        <p>Arnold Pie</p>
+                        <p>arnold.pie@example.com</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <p>10/15/15</p>
+                </div>
+            </div>
+            <hr class="border-last">
         </div>
-        <p>10/15/15</p>
-      </div>
-      <div class="m3">
-        <div class="m3-info">
-          <img src="images/member-3.jpg" alt="Image of Jennifer Lewis">
-          <p>Jennifer Lewis</p>
-          <p>jennifer.lewis@example.com</p>
+        <div class="recent-activity">
+            <h3>RECENT ACTIVITY</h3>
+            <div class="member">
+                <div class="img1">
+                    <img src="images/member-1.jpg">
+                    <div class="user-info">
+                        <p>Jessica Watts commented on YourApp's SEO Tip's</p>
+                        <p>4 hours ago</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <hr class="border">
+            <div class="member">
+                <div class="img1">
+                    <img src="images/member-2.jpg">
+                    <div class="user-info">
+                        <p>Jim Swole liked the post Facebook's Changes for 2020</p>
+                        <p>5 hours ago</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <hr class="border">
+            <div class="member">
+                <div class="img1">
+                    <img src="images/member-3.jpg">
+                    <div class="user-info">
+                        <p>Sarah Pepper commented on Facebook's Changes for 2020</p>
+                        <p>5 hours ago</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <hr class="border">
+            <div class="member">
+                <div class="img1">
+                    <img src="images/member-4.jpg">
+                    <div class="user-info">
+                        <p>Arnold Pie posted YourApp's SEO Tips</p>
+                        <p>1 day ago</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <hr class="border-last">
         </div>
-        <p>10/15/15</p>
-      </div>
-      <div class="m4">
-        <div class="m4-info">
-          <img src="images/member-4.jpg" alt="Image of John Oliver">
-          <p>John Oliver</p>
-          <p>john.oliver@example.com</p>
+        <div class="message-user">
+            <h3>MESSAGE USER</h3>
+            <form class="message-info" action="submit">
+                <input class="search" type="text" placeholder="Search for User">
+                <textarea class="message" placeholder="Message for User"></textarea>
+                <button>SEND</button>
+            </form>
         </div>
-        <p>10/15/15</p>
-      </div>
-    </div>
-    <div class="recent-activity">
-      <h3>RECENT ACTIVITY</h3>
-      <div class="a1">
-        <img src="images/member-1.jpg" alt="Image of Jessica Watts">
-        <p>Jessica Watts commented on YorApp's SEO Tips</p>
-        <p>4 hours ago</p>
-      </div>
-      <div class="a2">
-        <img src="images/member-2.jpg" alt="Image of Jeff Smith">
-        <p>Jeff Smith likes ths post Facebooks Changes for 2016</p>
-        <p>5 hours ago</p>
-      </div>
-      <div class="a3">
-        <img src="images/member-3.jpg" alt="Image of Jennifer Lewis">
-        <p>Jennifer Lewis commented on Facebook's Changes for 2016</p>
-        <p>5 hours ago</p>
-      </div>
-      <div class="a4">
-        <img src="images/member-4.jpg" alt="Image of John Oliver">
-        <p>John Oliver posted YorApp's SEO Tips</p>
-        <p>1 day ago</p>
-      </div>
-    </div>
-    <div class="message-user">
-      <h3>MESSAGE USER</h3>
-      <div class="message">
-        <input type="text" placeholder="Search for User">  
-        <input type="textarea" placeholder="Message for User">
-        <button>SEND</button>
-      </div>
-    </div>
-    <div class="settings">
-      <h3>SETTINGS</h3>
-        <div class="onoffswitch">
-          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
-          <label class="onoffswitch-label" for="myonoffswitch">
-              <span class="onoffswitch-inner"></span>
-              <span class="onoffswitch-switch"></span>
-          </label>
-      </div>
-      <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1" tabindex="0" checked>
-        <label class="onoffswitch-label" for="myonoffswitch">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-        </label>
-    </div>
-    </div>
-</main>
+        <div class="settings">
+            <h3>SETTINGS</h3>
+            <div class="toggle">
+                <p>Send Email Notifications</p>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="toggle">
+                <p>Set Profile to Public</p>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <select>
+                <option>Select Timezone</option>
+                <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
+                <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+                <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
+                <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
+                <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+                <option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+                <option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7">(GMT-07:00) Arizona</option>
+                <option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                <option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+                <option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Central America</option>
+                <option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+                <option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                <option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Saskatchewan</option>
+                <option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+                <option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+                <option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Indiana (East)</option>
+                <option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+                <option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
+                <option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Manaus</option>
+                <option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Santiago</option>
+                <option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="-3.5">(GMT-03:30) Newfoundland</option>
+                <option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Brasilia</option>
+                <option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+                <option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Greenland</option>
+                <option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Montevideo</option>
+                <option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
+                <option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
+                <option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="-1">(GMT-01:00) Azores</option>
+                <option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+                <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+                <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+                <option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) West Central Africa</option>
+                <option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Amman</option>
+                <option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+                <option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Beirut</option>
+                <option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Cairo</option>
+                <option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="2">(GMT+02:00) Harare, Pretoria</option>
+                <option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+                <option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Jerusalem</option>
+                <option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Minsk</option>
+                <option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Windhoek</option>
+                <option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+                <option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+                <option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Nairobi</option>
+                <option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Tbilisi</option>
+                <option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="3.5">(GMT+03:30) Tehran</option>
+                <option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+                <option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Baku</option>
+                <option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Yerevan</option>
+                <option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="4.5">(GMT+04:30) Kabul</option>
+                <option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="5">(GMT+05:00) Yekaterinburg</option>
+                <option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+                <option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
+                <option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+                <option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="5.75">(GMT+05:45) Kathmandu</option>
+                <option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="6">(GMT+06:00) Almaty, Novosibirsk</option>
+                <option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="6">(GMT+06:00) Astana, Dhaka</option>
+                <option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
+                <option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+                <option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="7">(GMT+07:00) Krasnoyarsk</option>
+                <option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+                <option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+                <option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+                <option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Perth</option>
+                <option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Taipei</option>
+                <option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+                <option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Seoul</option>
+                <option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="9">(GMT+09:00) Yakutsk</option>
+                <option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Adelaide</option>
+                <option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Darwin</option>
+                <option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Brisbane</option>
+                <option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+                <option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Hobart</option>
+                <option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Guam, Port Moresby</option>
+                <option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Vladivostok</option>
+                <option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+                <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="12">(GMT+12:00) Auckland, Wellington</option>
+                <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+                <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
+            </select>	
+            <div class="time-btn">
+                <button class="btn1">SAVE</button>
+                <button class="btn2">CANCEL</button>
+            </div>		
+        </div>
+        </div>
 </div>
-
-
-<script src="js/chart.js"></script>
-<script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
