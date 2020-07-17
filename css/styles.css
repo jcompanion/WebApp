@@ -33,12 +33,12 @@ header {
 .logo-bell span {
     font-weight: 200;
 }
-.logo-bell img {
+.logo-bell svg {
     height: 30px;
     margin: 20px 0 20px 20px;
     transition: transform .15s ease-in-out;
 }
-.logo-bell img:hover {
+.logo-bell svg:hover {
     transform: scale(1.2);
 }
 .user {
@@ -225,7 +225,7 @@ nav div {
     height: 100px;
     width: 100px;
 }
-.logo img {
+.logo svg {
     width: 70%;
 }
 .logo-box {
@@ -488,7 +488,7 @@ textarea::placeholder {
           width: 100px;
           height: 30%;
       }
-      .logo-bell img {
+      .logo-bell svg {
           height: 20px;
       }
       .grid h3 {
@@ -504,7 +504,8 @@ textarea::placeholder {
   @media (min-width: 770px) { 
       .grid {
         display: grid;
-        
+        grid-template-columns: 80px 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
         "nav dashboard dashboard"
         "nav alert alert"
